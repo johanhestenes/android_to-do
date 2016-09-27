@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:tools="http://schemas.android.com/tools">
+
+    <CheckBox
+        android:id="@+id/list_complete_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:layout_alignBottom="@+id/list_x_button"
+        android:layout_toLeftOf="@+id/list_x_button"
+        android:layout_toStartOf="@+id/list_x_button"
+        android:onClick="addCheck"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/list_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/list_complete_check_box"
+        android:textStyle="bold"
+        tools:text="Task"
+        android:padding="4dp"
+        android:textSize="15sp"
+        android:layout_alignBottom="@+id/list_complete_check_box"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:id="@+id/list_x_button"
+        android:textSize="10sp"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="deleteTask"/>
+</RelativeLayout>
